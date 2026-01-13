@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at bottom, #090a1a 70%, #1a1036 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+.solar-system {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.sun {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe780 0%, #f9ae34 60%, #ff682d 88%, #ff3e1d 100%);
+  box-shadow: 0 0 90px 40px #ffd97480, 0 0 100px 0 #ff5118bb, 0 0 0 10px #fff00020 inset;
+  filter: blur(0.5px);
+  z-index: 2;
+  animation: sun-glow 3s alternate infinite;
+}
+@keyframes sun-glow {
+  0% { box-shadow: 0 0 90px 40px #ffd97480, 0 0 100px 0 #ff5118bb, 0 0 0 10px #fff00020 inset; }
+  100% { box-shadow: 0 0 140px 60px #fff6c980, 0 0 200px 12px #ff8918cc, 0 0 0 10px #ffe08a50 inset; }
+}
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1.5px solid rgba(150,200,255, 0.07);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.orbit1 { width: 210px; height: 210px; animation: orbit-ani 3.5s linear infinite; }
+.orbit2 { width: 300px; height: 300px; animation: orbit-ani 5s linear infinite reverse; }
+.orbit3 { width: 400px; height: 400px; animation: orbit-ani 6.8s linear infinite; }
+.orbit4 { width: 530px; height: 530px; animation: orbit-ani 8.9s linear infinite reverse; }
+.orbit5 { width: 670px; height: 670px; animation: orbit-ani 11.2s linear infinite; }
+.orbit6 { width: 810px; height: 810px; animation: orbit-ani 15s linear infinite reverse; }
+.orbit7 { width: 930px; height: 930px; animation: orbit-ani 18.5s linear infinite; }
+.orbit8 { width: 1030px; height: 1030px; animation: orbit-ani 22.5s linear infinite reverse; }
+@keyframes orbit-ani {
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px 6px #ffffff50;
+  filter: drop-shadow(0 0 12px #fff3); 
+}
+.planet1 {
+  width: 16px; height: 16px;
+  background: radial-gradient(circle, #b8eaff 60%, #3ba3e7 100%);
+  box-shadow: 0 0 12px 4px #7cefffdd, 0 0 22px 2px #00bfff44;
+  animation: planet-glow1 2s alternate infinite;
+}
+@keyframes planet-glow1 {
+  0% { box-shadow: 0 0 12px 4px #7cefffdd, 0 0 22px 2px #00bfff44; }
+  100% { box-shadow: 0 0 20px 9px #cfffff99, 0 0 44px 4px #50e5ff33; }
+}
+.planet2 {
+  width: 20px; height: 20px;
+  background: radial-gradient(circle, #f9a 60%, #ff4580 100%);
+  box-shadow: 0 0 14px 6px #ffb3d6a0;
+  animation: planet-glow2 2.3s alternate infinite;
+}
+@keyframes planet-glow2 {
+  100% { box-shadow: 0 0 22px 12px #ffd3e5a0; }
+}
+.planet3 {
+  width: 24px; height: 24px;
+  background: radial-gradient(circle, #ffe88a 50%, #ffad04 100%);
+  box-shadow: 0 0 18px 6px #ffd678cc;
+  animation: planet-glow3 1.8s alternate infinite;
+}
+@keyframes planet-glow3 {
+  100% { box-shadow: 0 0 28px 15px #fff7a8aa; }
+}
+.planet4 {
+  width: 30px; height: 30px;
+  background: radial-gradient(circle, #d4fcb7 60%, #44b254 100%);
+  box-shadow: 0 0 16px 7px #98ffb3bb;
+  animation: planet-glow4 2.6s alternate infinite;
+}
+@keyframes planet-glow4 {
+  100% { box-shadow: 0 0 34px 12px #c7ffccb0; }
+}
+.planet5 {
+  width: 22px; height: 22px;
+  background: radial-gradient(circle, #fff 70%, #b3b3cb 100%);
+  box-shadow: 0 0 12px 6px #e8e8fa80;
+  animation: planet-glow5 2.1s alternate infinite;
+}
+@keyframes planet-glow5 {
+  100% { box-shadow: 0 0 20px 14px #f7f7ffcc; }
+}
+.planet6 {
+  width: 38px; height: 38px;
+  background: radial-gradient(circle, #bafffc 55%, #30d8df 100%);
+  box-shadow: 0 0 26px 11px #1edbf2aa;
+  animation: planet-glow6 2.8s alternate infinite;
+}
+@keyframes planet-glow6 {
+  100% { box-shadow: 0 0 44px 22px #c6ffff88; }
+}
+.planet7 {
+  width: 32px; height: 32px;
+  background: radial-gradient(circle, #b1cfff 55%, #3752e9 100%);
+  box-shadow: 0 0 26px 10px #92adfacc;
+  animation: planet-glow7 2.5s alternate infinite;
+}
+@keyframes planet-glow7 {
+  100% { box-shadow: 0 0 32px 14px #c7dbfdcc; }
+}
+.planet8 {
+  width: 24px; height: 24px;
+  background: radial-gradient(circle, #e6e6ef 60%, #7a98d5 100%);
+  box-shadow: 0 0 10px 5px #b3bcee99;
+  animation: planet-glow8 2.9s alternate infinite;
+}
+@keyframes planet-glow8 {
+  100% { box-shadow: 0 0 20px 13px #eaeafd88; }
+}
+.stars-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 90% 10%, #fff 0 1px, transparent 1.5px),
+    radial-gradient(circle at 20% 75%, #fff 0 1px, transparent 2px),
+    radial-gradient(circle at 50% 13%, #fff5 0 2px, transparent 2.5px),
+    radial-gradient(circle at 12% 55%, #fff8 0 1.3px, transparent 2px),
+    radial-gradient(circle at 88% 80%, #fff2 0 2px, transparent 2.7px),
+    radial-gradient(circle at 33% 40%, #fff8 0 1.5px, transparent 2px),
+    radial-gradient(circle at 25% 13%, #fff6 0 1px, transparent 1.7px),
+    radial-gradient(circle at 77% 26%, #fff6 0 2px, transparent 2.4px),
+    radial-gradient(circle at 60% 70%, #fff9 0 2px, transparent 2.8px),
+    radial-gradient(circle at 41% 85%, #fff4 0 2.2px, transparent 2.7px);
+  opacity: 0.85;
+  animation: stars-twinkle 5s linear infinite;
+}
+@keyframes stars-twinkle {
+  0%,100% { filter: brightness(1); }
+  50% { filter: brightness(1.25) blur(0.5px); }
+}
+@media (max-width: 540px) {
+  .sun { width: 90px; height: 90px; }
+  .orbit1 { width: 110px; height: 110px; }
+  .orbit2 { width: 150px; height: 150px; }
+  .orbit3 { width: 190px; height: 190px; }
+  .orbit4 { width: 240px; height: 240px; }
+  .orbit5 { width: 310px; height: 310px; }
+  .orbit6 { width: 390px; height: 390px; }
+  .orbit7 { width: 440px; height: 440px; }
+  .orbit8 { width: 490px; height: 490px; }
+  .planet1, .planet2, .planet3, .planet4, .planet5, .planet6, .planet7, .planet8 {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
+
+/* Vertical screen optimization */
+@media (min-aspect-ratio: 9/16) {
+  .solar-system { height: 1920px; max-height: 100vh; }
+}
